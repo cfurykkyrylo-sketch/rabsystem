@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="m_Home">🏠 Головне меню</sys:String>
+    <sys:String x:Key="m_Journal">📝 Журнал змін</sys:String>
+    <sys:String x:Key="m_Stats">📊 Статистика</sys:String>
+    <sys:String x:Key="m_Settings">⚙ Налаштування</sys:String>
+
+    <sys:String x:Key="h_Welcome">Приєднуйтесь до rabsystem! 🚀</sys:String>
+    <sys:String x:Key="h_Desc">Персональний трекер робочих змін та фінансів.</sys:String>
+    <sys:String x:Key="h_AboutTitle">Про проєкт</sys:String>
+    <sys:String x:Key="h_DevInfo">Розробник: Фурик Кирило (Група КН-21)</sys:String>
+
+    <sys:String x:Key="s_SettingsTitle">⚙ Налаштування</sys:String>
+    <sys:String x:Key="s_ThemeTitle">Зовнішній вигляд</sys:String>
+    <sys:String x:Key="s_ThemeDesc">Оберіть тему оформлення додатку:</sys:String>
+    <sys:String x:Key="s_ThemeBtn">🌓 Змінити тему (Світла/Темна)</sys:String>
+    <sys:String x:Key="s_LangTitle">Мова інтерфейсу</sys:String>
+    <sys:String x:Key="s_LangDesc">Оберіть мову (змінюється миттєво):</sys:String>
+
+    <sys:String x:Key="sh_AddShift">✨ Додати зміну</sys:String>
+    <sys:String x:Key="sh_Date">Дата</sys:String>
+    <sys:String x:Key="sh_Hours">Кількість годин</sys:String>
+    <sys:String x:Key="sh_Notes">Нотатки</sys:String>
+    <sys:String x:Key="sh_SaveBtn">➕ ЗБЕРЕГТИ ЗМІНУ</sys:String>
+    <sys:String x:Key="sh_History">Історія відпрацювань</sys:String>
+    <sys:String x:Key="sh_ColDate">Дата</sys:String>
+    <sys:String x:Key="sh_ColHours">Години</sys:String>
+    <sys:String x:Key="sh_ColEarned">Заробіток</sys:String>
+    <sys:String x:Key="sh_ColNotes">Нотатки</sys:String>
+    <sys:String x:Key="sh_DelBtn">🗑 Видалити обрану</sys:String>
+
+    <sys:String x:Key="st_Title">📈 Аналітика заробітку</sys:String>
+    <sys:String x:Key="st_TotalEarned">Всього зароблено</sys:String>
+    <sys:String x:Key="st_TotalHours">Робочі години</sys:String>
+    <sys:String x:Key="st_AvgShift">Середня зміна</sys:String>
+    <sys:String x:Key="st_GoalTitle">🎯 Фінансова ціль (10 000)</sys:String>
+    <sys:String x:Key="st_GoalDesc">Прогрес виконання плану:</sys:String>
+    <sys:String x:Key="st_RecordsTitle">🏆 Особисті рекорди</sys:String>
+    <sys:String x:Key="st_BestShift">Найприбутковіша зміна:</sys:String>
+    <sys:String x:Key="st_LongestShift">Найдовша зміна:</sys:String>
+    <sys:String x:Key="st_NoData">Немає даних</sys:String>
+</ResourceDictionary>

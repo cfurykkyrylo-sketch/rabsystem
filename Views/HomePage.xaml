@@ -1,0 +1,39 @@
+﻿<Page x:Class="ShiftTracker.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Головна">
+
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Page.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.8"/>
+                    <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,20,0,-20" To="0" Duration="0:0:0.8">
+                        <ThicknessAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </ThicknessAnimation.EasingFunction>
+                    </ThicknessAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="🚀" FontSize="80" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="{DynamicResource h_Welcome}" FontSize="42" FontWeight="ExtraBold" Foreground="{DynamicResource TextPrimary}" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+            <TextBlock Text="{DynamicResource h_Desc}" FontSize="18" Foreground="{DynamicResource TextSecondary}" HorizontalAlignment="Center" Margin="0,0,0,50"/>
+
+            <Border Background="{DynamicResource CardBackground}" CornerRadius="15" Padding="40,30" HorizontalAlignment="Center" MinWidth="400">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="25" ShadowDepth="8" Opacity="0.15" Direction="270"/>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource h_AboutTitle}" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource TextPrimary}" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+                    <TextBlock Text="{DynamicResource h_DevInfo}" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource AccentColor}" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

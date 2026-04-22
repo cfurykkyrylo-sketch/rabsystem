@@ -1,0 +1,57 @@
+﻿<Page x:Class="ShiftTracker.Views.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Налаштування">
+
+    <Page.Triggers>
+        <EventTrigger RoutedEvent="Page.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5"/>
+                    <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,40,0,-40" To="20" Duration="0:0:0.6">
+                        <ThicknessAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </ThicknessAnimation.EasingFunction>
+                    </ThicknessAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Page.Triggers>
+
+    <Grid>
+        <StackPanel Margin="10,0,0,0">
+            <TextBlock Text="{DynamicResource s_SettingsTitle}" FontSize="26" FontWeight="Bold" Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,30"/>
+
+            <Border Background="{DynamicResource CardBackground}" CornerRadius="15" Padding="25" Margin="0,0,0,20" MaxWidth="500" HorizontalAlignment="Left">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="20" ShadowDepth="5" Opacity="0.1" Direction="270"/>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource s_ThemeTitle}" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,15"/>
+                    <TextBlock Text="{DynamicResource s_ThemeDesc}" Foreground="{DynamicResource TextSecondary}" Margin="0,0,0,15"/>
+                    <Button Content="{DynamicResource s_ThemeBtn}" Click="ChangeTheme_Click" Padding="15,10" Background="{DynamicResource AccentColor}" Foreground="#11111B" FontWeight="Bold" BorderThickness="0" Cursor="Hand">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Border>
+
+            <Border Background="{DynamicResource CardBackground}" CornerRadius="15" Padding="25" MaxWidth="500" HorizontalAlignment="Left">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="20" ShadowDepth="5" Opacity="0.1" Direction="270"/>
+                </Border.Effect>
+                <StackPanel>
+                    <TextBlock Text="{DynamicResource s_LangTitle}" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,15"/>
+                    <TextBlock Text="{DynamicResource s_LangDesc}" Foreground="{DynamicResource TextSecondary}" Margin="0,0,0,15"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="btnUa" Content="🇺🇦 Українська" Click="LangUa_Click" Margin="0,0,10,0" Padding="15,10" Background="{DynamicResource BorderColor}" Foreground="{DynamicResource TextPrimary}" BorderThickness="0" Cursor="Hand"/>
+                        <Button x:Name="btnEn" Content="🇺🇸 English" Click="LangEn_Click" Padding="15,10" Background="{DynamicResource BorderColor}" Foreground="{DynamicResource TextPrimary}" BorderThickness="0" Cursor="Hand"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
